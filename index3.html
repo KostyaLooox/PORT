@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - ЗАБЫТЫЙ ДОМ</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+<section class="work-hero" style="background-image: url('4/photo_2025-02-08_00-35-18.jpg');">
+
+  <!-- навигация -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">ГЛАВНАЯ</a>
+      <a href="about.html">ОБО МНЕ</a>
+      <a href="works.html">РАБОТЫ</a>
+    </nav>
+  </header>
+
+  <div class="work-hero-content">
+
+    <div class="work-left">
+      <div class="work-buttons">
+        <button class="btn" onclick="location.href='index2.html'">←</button>
+        <button class="btn" onclick="location.href='index4.html'">→</button>
+      </div>
+
+      <div class="work-nav">
+        <span onclick="location.href='index.html'" style="cursor: pointer;">НАЗАД</span>
+        <span onclick="location.href='work2.html'" style="cursor: pointer;">ВПЕРЕД</span>
+      </div>
+    </div>
+
+    <div class="work-right">
+      <h1 class="work-title">Рука</h1>
+    </div>
+
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section class="work-gallery">
+  <div class="gallery-row">
+    <img src="4/35c3b21ca7afc38b4affd2edfcf739ea.jpg" class="gallery-img" onclick="openFullscreen(this)">
+    <img src="4/photo_2025-02-08_15-33-49.jpg" class="gallery-img" onclick="openFullscreen(this)">
+    <img src="4/photo_2025-02-08_15-33-54.jpg" class="gallery-img" onclick="openFullscreen(this)">
+  </div>
+
+  <div class="gallery-line">
+    <span>МУДБОРД</span>
+    <span>РЕФЕРЕНС</span>
+    <span>РЕНДЕР</span>
+  </div>
+</section>
+
+<!-- ИНФО -->
+<section class="work-info">
+
+  <!-- левый блок -->
+  <div class="info-left">
+    <h2>МИР РОЗЫ</h2>
+    <span class="project-date">2024</span>
+  </div>
+
+  <!-- правый блок -->
+  <div class="info-right">
+    <div class="info-top">
+      <p>
+        3D СЦЕНА: человек с множеством рук в комнате.
+      </p>
+    </div>
+
+    <div class="info-text">
+      <p>
+        СТАРЫЙ человек. МОДЕЛИРОВАН В BLENDER.
+        МАТЕРИАЛЫ — кожа и мрамор.
+      </p>
+      <p>
+        ОНА ЗАСТРЯЛА ТАМ ГДЕ НЕ МОГЛА БЫТЬ
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ИЗОБРАЖЕНИЯ -->
+<section class="work-images">
+
+  <!-- правая колонка -->
+  <div class="right-col">
+    <img src="4/photo_2025-02-08_15-33-54.jpg" class="img-top-right work-img" onclick="openFullscreen(this)">
+    <img src="4/photo_2025-02-08_00-35-22.jpg" class="img-bottom-right work-img" onclick="openFullscreen(this)">
+  </div>
+
+  <!-- левая колонка -->
+  <div class="left-col">
+    <img src="4/photo_2025-02-08_15-33-49.jpg" class="img-big-top work-img" onclick="openFullscreen(this)">
+
+    <div class="work-text">
+      <p>
+        ИСТОЧНИК СВЕТА ИДЕТ ИЗ КОМНАТЫ С ЭФЕКТОМ РЫБЬЕГО ГЛАЗА
+      </p>
+    </div>
+
+    <img src="4/photo_2025-02-08_15-34-01.jpg" class="img-bottom-left work-img" onclick="openFullscreen(this)">
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-top">
+    <h2>ЯБЛОКО</h2>
+    <p>ЛУЧШЕ ПРОСТО КРИЧАТЬ В ОКНО</p>
+  </div>
+
+  <div class="footer-bottom">
+
+    <div class="footer-left">
+      <img src="img/Group 2.png" alt="logo">
+      <span>BIZARRE PORTFOLIO 3D DESIGNER</span>
+    </div>
+
+    <div class="footer-center">
+      <span>© СДЕЛАНО В 2026 ШИШКИНЫМ КОНСТАНТИНОМ</span>
+    </div>
+
+    <div class="footer-right">
+      <a href="#">TELEGRAM</a>
+      <a href="#">BEHANCE</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- МОДАЛКА -->
+<div id="fullscreenModal" class="modal" onclick="closeFullscreen()">
+  <span class="close" onclick="closeFullscreen()">&times;</span>
+  <img class="modal-content" id="fullscreenImage">
+</div>
+
+<script>
+function openFullscreen(img) {
+  const modal = document.getElementById('fullscreenModal');
+  const modalImg = document.getElementById('fullscreenImage');
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+  document.body.style.overflow = "hidden";
+}
+
+function closeFullscreen() {
+  const modal = document.getElementById('fullscreenModal');
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    closeFullscreen();
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - ЗАБЫТЫЙ ДОМ</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+<section class="work-hero" style="background-image: url('3/lv21.jpg');">
+
+  <!-- навигация -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">ГЛАВНАЯ</a>
+      <a href="about.html">ОБО МНЕ</a>
+      <a href="works.html">РАБОТЫ</a>
+    </nav>
+  </header>
+
+  <div class="work-hero-content">
+
+    <div class="work-left">
+      <div class="work-buttons">
+        <button class="btn" onclick="location.href='index3.html'">←</button>
+        <button class="btn" onclick="location.href='index5.html'">→</button>
+      </div>
+
+      <div class="work-nav">
+        <span onclick="location.href='index.html'" style="cursor: pointer;">НАЗАД</span>
+        <span onclick="location.href='work2.html'" style="cursor: pointer;">ВПЕРЕД</span>
+      </div>
+    </div>
+
+    <div class="work-right">
+      <h1 class="work-title">ИГРА</h1>
+    </div>
+
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section class="work-gallery">
+  <div class="gallery-row">
+    <img src="3/30a3364b704ba5027a6c72a39de527bf.jpg" class="gallery-img" onclick="openFullscreen(this)">
+    <img src="3/lv22.jpg" class="gallery-img" onclick="openFullscreen(this)">
+    <img src="3/lv22.jpg" class="gallery-img" onclick="openFullscreen(this)">
+  </div>
+
+  <div class="gallery-line">
+    <span>МУДБОРД</span>
+    <span>РЕФЕРЕНС</span>
+    <span>РЕНДЕР</span>
+  </div>
+</section>
+
+<!-- ИНФО -->
+<section class="work-info">
+
+  <!-- левый блок -->
+  <div class="info-left">
+    <h2>МИР РОЗЫ</h2>
+    <span class="project-date">2024</span>
+  </div>
+
+  <!-- правый блок -->
+  <div class="info-right">
+    <div class="info-top">
+      <p>
+        3D СЦЕНА: Замок в игре в которой мы играем зданиями.
+      </p>
+    </div>
+
+    <div class="info-text">
+      <p>
+        Старый замок который упраляеться стрелками.
+        МАТЕРИАЛЫ — камень и просто цвет.
+      </p>
+      <p>
+        ОНА ЗАСТРЯЛА ТАМ ГДЕ НЕ МОГЛА БЫТЬ
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ИЗОБРАЖЕНИЯ -->
+<section class="work-images">
+
+  <!-- правая колонка -->
+  <div class="right-col">
+    <img src="3/lv22.jpg" class="img-top-right work-img" onclick="openFullscreen(this)">
+
+  </div>
+
+  <!-- левая колонка -->
+  <div class="left-col">
+    <img src="3/lv21.jpg" class="img-big-top work-img" onclick="openFullscreen(this)">
+
+    <div class="work-text">
+      <p>
+        ИСТОЧНИК СВЕТА есть
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-top">
+    <h2>ЯБЛОКО</h2>
+    <p>ЛУЧШЕ ПРОСТО КРИЧАТЬ В ОКНО</p>
+  </div>
+
+  <div class="footer-bottom">
+
+    <div class="footer-left">
+      <img src="img/Group 2.png" alt="logo">
+      <span>BIZARRE PORTFOLIO 3D DESIGNER</span>
+    </div>
+
+    <div class="footer-center">
+      <span>© СДЕЛАНО В 2026 ШИШКИНЫМ КОНСТАНТИНОМ</span>
+    </div>
+
+    <div class="footer-right">
+      <a href="#">TELEGRAM</a>
+      <a href="#">BEHANCE</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- МОДАЛКА -->
+<div id="fullscreenModal" class="modal" onclick="closeFullscreen()">
+  <span class="close" onclick="closeFullscreen()">&times;</span>
+  <img class="modal-content" id="fullscreenImage">
+</div>
+
+<script>
+function openFullscreen(img) {
+  const modal = document.getElementById('fullscreenModal');
+  const modalImg = document.getElementById('fullscreenImage');
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+  document.body.style.overflow = "hidden";
+}
+
+function closeFullscreen() {
+  const modal = document.getElementById('fullscreenModal');
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    closeFullscreen();
+  }
+});
+</script>
+
+</body>
+</html>
